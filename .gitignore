@@ -1,2 +1,6 @@
 *.aux
 *.log
+table.tex.txt
+table.txt
+*.ipynb
+.ipynb_checkpoints/
