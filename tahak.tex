@@ -1,0 +1,54 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[slovak]{babel}
+\usepackage{a4wide,color}
+\usepackage{tabularx}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{booktabs}
+
+
+
+\textwidth 6.5in
+\oddsidemargin 0.0in
+\evensidemargin 0.0in
+
+\title{Ťahák $GF(2^4)$}
+
+\newcommand{\tahak}{
+\begin{minipage}{.5\textwidth}
+\begin{tabular}{lccc}\toprule
+$\alpha^i$ & bin & $\alpha^{i+15}$ & $\alpha^{i-15}$ \\ \midrule
+$\alpha^0 = 1$ & 0001 & $\alpha^{15}$ & $\alpha^{-15}$ \\
+$\alpha^1 = \alpha$ & 0010 & $\alpha^{16}$ & $\alpha^{-14}$ \\
+$\alpha^2$ & 0100 & $\alpha^{17}$ & $\alpha^{-13}$ \\
+$\alpha^3$ & 1000 & $\alpha^{18}$ & $\alpha^{-12}$ \\
+$\alpha^4$ & 0011 & $\alpha^{19}$ & $\alpha^{-11}$ \\
+$\alpha^5$ & 0110 & $\alpha^{20}$ & $\alpha^{-10}$ \\
+$\alpha^6$ & 1100 & $\alpha^{21}$ & $\alpha^{-9}$ \\
+$\alpha^7$ & 1011 & $\alpha^{22}$ & $\alpha^{-8}$ \\
+$\alpha^8$ & 0101 & $\alpha^{23}$ & $\alpha^{-7}$ \\
+$\alpha^9$ & 1010 & $\alpha^{24}$ & $\alpha^{-6}$ \\
+$\alpha^{10}$ & 0111 & $\alpha^{25}$ & $\alpha^{-5}$ \\
+$\alpha^{11}$ & 1110 & $\alpha^{26}$ & $\alpha^{-4}$ \\
+$\alpha^{12}$ & 1111 & $\alpha^{27}$ & $\alpha^{-3}$ \\
+$\alpha^{13}$ & 1101 & $\alpha^{28}$ & $\alpha^{-2}$ \\
+$\alpha^{14}$ & 1001 & $\alpha^{29}$ & $\alpha^{-1}$ \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+}
+
+\begin{document}
+\thispagestyle{empty}
+
+\tahak
+\tahak
+
+\vspace{3cm}
+
+\tahak
+\tahak
+\end{document}
