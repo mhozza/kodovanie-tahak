@@ -1,0 +1,83 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[slovak]{babel}
+\usepackage{a4wide,color}
+\usepackage{tabularx}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{booktabs}
+
+
+
+\textwidth 6.5in
+\oddsidemargin 0.0in
+\evensidemargin 0.0in
+
+\title{Ťahák $GF(2^4)$}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+\section*{Ťahák z teórie kódovania}
+\end{center}
+
+\vspace{1cm}
+
+\begin{minipage}{.5\textwidth}
+\begin{tabular}{lccc}\toprule
+$\alpha^i$ & bin & $\alpha^{i+15}$ & $\alpha^{i-15}$ \\ \midrule
+$\alpha^0 = 1$ & 0001 & $\alpha^{15}$ & $\alpha^{-15}$ \\
+$\alpha^1 = \alpha$ & 0010 & $\alpha^{16}$ & $\alpha^{-14}$ \\
+$\alpha^2$ & 0100 & $\alpha^{17}$ & $\alpha^{-13}$ \\
+$\alpha^3$ & 1000 & $\alpha^{18}$ & $\alpha^{-12}$ \\
+$\alpha^4$ & 0011 & $\alpha^{19}$ & $\alpha^{-11}$ \\
+$\alpha^5$ & 0110 & $\alpha^{20}$ & $\alpha^{-10}$ \\
+$\alpha^6$ & 1100 & $\alpha^{21}$ & $\alpha^{-9}$ \\
+$\alpha^7$ & 1011 & $\alpha^{22}$ & $\alpha^{-8}$ \\
+$\alpha^8$ & 0101 & $\alpha^{23}$ & $\alpha^{-7}$ \\
+$\alpha^9$ & 1010 & $\alpha^{24}$ & $\alpha^{-6}$ \\
+$\alpha^{10}$ & 0111 & $\alpha^{25}$ & $\alpha^{-5}$ \\
+$\alpha^{11}$ & 1110 & $\alpha^{26}$ & $\alpha^{-4}$ \\
+$\alpha^{12}$ & 1111 & $\alpha^{27}$ & $\alpha^{-3}$ \\
+$\alpha^{13}$ & 1101 & $\alpha^{28}$ & $\alpha^{-2}$ \\
+$\alpha^{14}$ & 1001 & $\alpha^{29}$ & $\alpha^{-1}$ \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+Cykly:
+
+\begin{tabular}{llll}
+$\alpha$ & $\alpha^{2}$ & $\alpha^{4}$ & $\alpha^{8}$ \\
+$\alpha^{3}$ & $\alpha^{6}$ & $\alpha^{12}$ & $\alpha^{9}$ \\
+$\alpha^{5}$ & $\alpha^{10}$ & &\\
+$\alpha^{7}$ & $\alpha^{14}$ & $\alpha^{13}$ & $\alpha^{11}$  \\
+\end{tabular}
+\end{minipage}
+
+\vspace{3cm}
+
+\begin{minipage}{1\textwidth}
+\begin{tabular}{c|ccccccccccccccc}
+$+$ & $\alpha^0$ & $\alpha^1$ & $\alpha^2$ & $\alpha^3$ & $\alpha^4$ & $\alpha^5$ & $\alpha^6$ & $\alpha^7$ & $\alpha^8$ & $\alpha^9$ & $\alpha^{10}$ & $\alpha^{11}$ & $\alpha^{12}$ & $\alpha^{13}$ & $\alpha^{14}$\\ \hline
+$\alpha^0$    & 0 & $\alpha^{4}$ & $\alpha^{8}$ & $\alpha^{14}$ & $\alpha^{1}$ & $\alpha^{10}$ & $\alpha^{13}$ & $\alpha^{9}$ & $\alpha^{2}$ & $\alpha^{7}$ & $\alpha^{5}$ & $\alpha^{12}$ & $\alpha^{11}$ & $\alpha^{6}$ & $\alpha^{3}$ \\
+$\alpha^1$    & $\alpha^{4}$ & 0 & $\alpha^{5}$ & $\alpha^{9}$ & $\alpha^{0}$ & $\alpha^{2}$ & $\alpha^{11}$ & $\alpha^{14}$ & $\alpha^{10}$ & $\alpha^{3}$ & $\alpha^{8}$ & $\alpha^{6}$ & $\alpha^{13}$ & $\alpha^{12}$ & $\alpha^{7}$ \\
+$\alpha^2$    & $\alpha^{8}$ & $\alpha^{5}$ & 0 & $\alpha^{6}$ & $\alpha^{10}$ & $\alpha^{1}$ & $\alpha^{3}$ & $\alpha^{12}$ & $\alpha^{0}$ & $\alpha^{11}$ & $\alpha^{4}$ & $\alpha^{9}$ & $\alpha^{7}$ & $\alpha^{14}$ & $\alpha^{13}$ \\
+$\alpha^3$    & $\alpha^{14}$ & $\alpha^{9}$ & $\alpha^{6}$ & 0 & $\alpha^{7}$ & $\alpha^{11}$ & $\alpha^{2}$ & $\alpha^{4}$ & $\alpha^{13}$ & $\alpha^{1}$ & $\alpha^{12}$ & $\alpha^{5}$ & $\alpha^{10}$ & $\alpha^{8}$ & $\alpha^{0}$ \\
+$\alpha^4$    & $\alpha^{1}$ & $\alpha^{0}$ & $\alpha^{10}$ & $\alpha^{7}$ & 0 & $\alpha^{8}$ & $\alpha^{12}$ & $\alpha^{3}$ & $\alpha^{5}$ & $\alpha^{14}$ & $\alpha^{2}$ & $\alpha^{13}$ & $\alpha^{6}$ & $\alpha^{11}$ & $\alpha^{9}$ \\
+$\alpha^5$    & $\alpha^{10}$ & $\alpha^{2}$ & $\alpha^{1}$ & $\alpha^{11}$ & $\alpha^{8}$ & 0 & $\alpha^{9}$ & $\alpha^{13}$ & $\alpha^{4}$ & $\alpha^{6}$ & $\alpha^{0}$ & $\alpha^{3}$ & $\alpha^{14}$ & $\alpha^{7}$ & $\alpha^{12}$ \\
+$\alpha^6$    & $\alpha^{13}$ & $\alpha^{11}$ & $\alpha^{3}$ & $\alpha^{2}$ & $\alpha^{12}$ & $\alpha^{9}$ & 0 & $\alpha^{10}$ & $\alpha^{14}$ & $\alpha^{5}$ & $\alpha^{7}$ & $\alpha^{1}$ & $\alpha^{4}$ & $\alpha^{0}$ & $\alpha^{8}$ \\
+$\alpha^7$    & $\alpha^{9}$ & $\alpha^{14}$ & $\alpha^{12}$ & $\alpha^{4}$ & $\alpha^{3}$ & $\alpha^{13}$ & $\alpha^{10}$ & 0 & $\alpha^{11}$ & $\alpha^{0}$ & $\alpha^{6}$ & $\alpha^{8}$ & $\alpha^{2}$ & $\alpha^{5}$ & $\alpha^{1}$ \\
+$\alpha^8$    & $\alpha^{2}$ & $\alpha^{10}$ & $\alpha^{0}$ & $\alpha^{13}$ & $\alpha^{5}$ & $\alpha^{4}$ & $\alpha^{14}$ & $\alpha^{11}$ & 0 & $\alpha^{12}$ & $\alpha^{1}$ & $\alpha^{7}$ & $\alpha^{9}$ & $\alpha^{3}$ & $\alpha^{6}$ \\
+$\alpha^9$    & $\alpha^{7}$ & $\alpha^{3}$ & $\alpha^{11}$ & $\alpha^{1}$ & $\alpha^{14}$ & $\alpha^{6}$ & $\alpha^{5}$ & $\alpha^{0}$ & $\alpha^{12}$ & 0 & $\alpha^{13}$ & $\alpha^{2}$ & $\alpha^{8}$ & $\alpha^{10}$ & $\alpha^{4}$ \\
+$\alpha^{10}$ & $\alpha^{5}$ & $\alpha^{8}$ & $\alpha^{4}$ & $\alpha^{12}$ & $\alpha^{2}$ & $\alpha^{0}$ & $\alpha^{7}$ & $\alpha^{6}$ & $\alpha^{1}$ & $\alpha^{13}$ & 0 & $\alpha^{14}$ & $\alpha^{3}$ & $\alpha^{9}$ & $\alpha^{11}$ \\
+$\alpha^{11}$ & $\alpha^{12}$ & $\alpha^{6}$ & $\alpha^{9}$ & $\alpha^{5}$ & $\alpha^{13}$ & $\alpha^{3}$ & $\alpha^{1}$ & $\alpha^{8}$ & $\alpha^{7}$ & $\alpha^{2}$ & $\alpha^{14}$ & 0 & $\alpha^{0}$ & $\alpha^{4}$ & $\alpha^{10}$ \\
+$\alpha^{12}$ & $\alpha^{11}$ & $\alpha^{13}$ & $\alpha^{7}$ & $\alpha^{10}$ & $\alpha^{6}$ & $\alpha^{14}$ & $\alpha^{4}$ & $\alpha^{2}$ & $\alpha^{9}$ & $\alpha^{8}$ & $\alpha^{3}$ & $\alpha^{0}$ & 0 & $\alpha^{1}$ & $\alpha^{5}$ \\
+$\alpha^{13}$ & $\alpha^{6}$ & $\alpha^{12}$ & $\alpha^{14}$ & $\alpha^{8}$ & $\alpha^{11}$ & $\alpha^{7}$ & $\alpha^{0}$ & $\alpha^{5}$ & $\alpha^{3}$ & $\alpha^{10}$ & $\alpha^{9}$ & $\alpha^{4}$ & $\alpha^{1}$ & 0 & $\alpha^{2}$ \\
+$\alpha^{14}$ & $\alpha^{3}$ & $\alpha^{7}$ & $\alpha^{13}$ & $\alpha^{0}$ & $\alpha^{9}$ & $\alpha^{12}$ & $\alpha^{8}$ & $\alpha^{1}$ & $\alpha^{6}$ & $\alpha^{4}$ & $\alpha^{11}$ & $\alpha^{10}$ & $\alpha^{5}$ & $\alpha^{2}$ & 0
+\end{tabular}
+\end{minipage}
+\end{document}
